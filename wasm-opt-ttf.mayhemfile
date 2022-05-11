@@ -3,4 +3,3 @@ target: wasm-opt-ttf
 
 cmds:
     - cmd: /wasm-opt-ttf
-	libfuzzer: true

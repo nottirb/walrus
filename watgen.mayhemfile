@@ -3,4 +3,3 @@ target: watgen
 
 cmds:
     - cmd: /watgen
-	libfuzzer: true
