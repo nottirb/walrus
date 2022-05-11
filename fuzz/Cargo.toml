@@ -10,6 +10,7 @@ cargo-fuzz = true
 
 [dependencies]
 bufrng = "1.0.1"
+binaryen = "0.12.1"
 
 [dependencies.walrus]
 path = ".."
