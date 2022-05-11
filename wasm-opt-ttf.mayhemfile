@@ -1,5 +1,0 @@
-project: walrus
-target: wasm-opt-ttf
-
-cmds:
-    - cmd: /wasm-opt-ttf
