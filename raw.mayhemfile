@@ -1,0 +1,5 @@
+project: walrus
+target: raw
+
+cmds:
+    - cmd: /raw

@@ -1,0 +1,5 @@
+project: walrus
+target: watgen
+
+cmds:
+    - cmd: /watgen
