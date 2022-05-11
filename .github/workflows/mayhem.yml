@@ -8,6 +8,7 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
   RAW_MAYHEMFILE: raw.mayhemfile
+  WASM-OPT-TTF_MAYHEMFILE: wasm-opt-ttf.mayhemfile
   WATGEN_MAYHEMFILE: watgen.mayhemfile
 
 jobs:
@@ -52,6 +53,13 @@ jobs:
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
           args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.RAW_MAYHEMFILE }}
+          sarif-output: sarif
+
+      - name: Start analysis for wasm-opt-ttf
+        uses: ForAllSecure/mcode-action@v1
+        with:
+          mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.WASM-OPT-TTF_MAYHEMFILE }}
           sarif-output: sarif
 
       - name: Start analysis for watgen
